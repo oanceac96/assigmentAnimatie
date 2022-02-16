@@ -1,0 +1,95 @@
+body {
+	background-color: #050210;
+}
+
+#vcircle2 {
+	width: 500px;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.circle2 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+	border-radius: 50%;
+	animation: animate 0.5s linear infinite;
+
+
+}
+
+.circle2:after {
+	content: ''; 
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	background-color: #09092a;
+	border-radius: 50%;
+}
+
+
+@keyframes animate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.circle2 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+	border-radius: 50%;
+}
+
+.circle2 span:nth-child(1){
+	filter: blur(0px);
+}
+
+.circle2 span:nth-child(2){
+	filter: blur(5px);
+}
+
+.circle2 span:nth-child(3){
+	filter: blur(10px);
+}
+
+.circle2 span:nth-child(4){
+	filter: blur(25px);
+}
+
+
+
+
+#vcircle2 .circle {
+	border-radius: 50%;
+	background: linear-gradient(#09092a, #121254);
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	opacity: 0;
+	animation-name: my-animation;
+        animation-duration: 4s;
+	animation-iteration-count: infinite;
+    }
+
+
+@keyframes my-animation {
+	from {
+		transform: scale(0);
+		opacity: .5;
+  	}
+	to {
+		transform: scale(1);
+		opacity: 0;
+  	}
+}
